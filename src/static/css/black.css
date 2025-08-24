@@ -87,8 +87,11 @@ hr {
 }
 
 a {
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: underline; /* Remove underline from links */
     color: inherit; /* Inherit color from parent */
+}
+a:hover {
+    color:#9b9e00;
 }
 
 

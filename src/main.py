@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, session, jsonify, flash
+from flask import Flask, render_template, redirect, url_for, request, session, jsonify, flash, send_from_directory
 from werkzeug.exceptions import HTTPException
 import random
 import json
@@ -88,6 +88,12 @@ def handle_error(e):
 @app.before_request
 def b4req():
     check_session()
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory("static/images","favicon.ico")
+
 
 if __name__=="__main__":
     app.run()

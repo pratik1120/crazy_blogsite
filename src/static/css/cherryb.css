@@ -103,11 +103,11 @@ hr {
 /* Link styling */
 a {
     text-decoration: none;
-    color: #4e2532; /* Rose pink for links */
+    color: #ffa2bf; /* Rose pink for links */
 }
 
 a:hover {
-    color: #f080a6; /* Lighter pink on hover */
+    color: #ff6196; /* Lighter pink on hover */
 }
 
 /* Popup styling */
