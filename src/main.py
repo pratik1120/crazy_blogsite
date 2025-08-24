@@ -16,6 +16,10 @@ password=os.getenv("password")
 
 @app.route("/")
 def index():
+    return render_template('index.html',is_index=True)
+
+@app.route("/blog")
+def blog():
     posts=dict(reversed(getjson().items()))
     return render_template("index.html",posts=posts,total=len(posts))
 

@@ -19,3 +19,7 @@ body {
   font-size: 1.5rem;
   transition: 0.3s;
 }
+
+.index-container {
+  text-align: center;
+}
