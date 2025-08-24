@@ -1,21 +1,34 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
-{% block title %}Blog{% endblock %}
+{% block title %}Blog{%endblock%}
 
-{% block content %}
-<div class="blog-container">
-  {% for key, post in posts.items() %}
-    <a href="{{ url_for('post', num=key) }}" class="post-link">
-      <section class="post-box">
-        <h2>
-          <strong>{{ post.num }}. <span>{{ post.name }}</span></strong>
-        </h2>
-        <p>{{ post.date }}</p>
-        <p>{{ post.time }}</p>
-      </section>
+{% block body %}
+<header>
+    {% if posts=={} %}
+    <div style="text-align:center">
+        <h1>nothing here <strong><span class="anim">yet</span></strong>.</h1>
+    </div>
+    {% endif %}
+</header>
+<main>
+    {% if posts=={} %}
+    <div style="text-align:center">
+        <p>check the <a style="text-decoration: underline;" href="//instagram.com/strychnine_and_water/" target="_blank">instagram</a>, might as well?</p>
+    </div>
+    {% else %}
+    <hr>
+    {% for key in posts %}
+    <a href="/post/{{key}}">
+        <section>
+            <h2>
+                <strong>{{ posts[key]['num'] }}. <span style="text-decoration: underline;">{{posts[key]['name']}}</span></strong>
+            </h2>
+            <p>{{posts[key]['date']}}</p>
+            <p>{{posts[key]['time']}}</p>
+        </section>
     </a>
-  {% else %}
-    <p>No posts yet.</p>
-  {% endfor %}
-</div>
-{% endblock %}
+    {%endfor%}
+    {% endif %}
+    <hr>
+</main>
+{%endblock%}

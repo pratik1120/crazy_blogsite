@@ -1,0 +1,163 @@
+/* Basic styling for body and text */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffeef2; /* Soft pink background */
+    color: #b46a6a; /* Dark brown text for contrast */
+    font-family: Arial, sans-serif; /* Fallback font */
+    line-height: 1.4; /* Adjusted line height for tighter spacing */
+    
+    /* Add floral motif as a background image */
+    background-image: url('/static/images/cherry.avif'); /* Replace with your floral image URL */
+    background-size: cover; /* Adjust size as needed for subtle effect */
+    background-blend-mode: multiply; /* Blend with background color for softer effect */
+    opacity: 0.95; /* Subtle transparency */
+}
+
+/* Top header styling */
+.top-header {
+    text-align: center;
+    color: #c45b7c; /* Soft rose text color */
+    padding: 8px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+/* Styling for links in the top header */
+.top-header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-header nav ul li {
+    display: inline;
+    margin: 0 8px;
+}
+
+.top-header nav ul li a {
+    color: #c45b7c; /* Rose pink for links */
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.top-header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26.25px;
+    color: #c45b7c; /* Rose color for main title */
+}
+
+/* Main section styling */
+main {
+    padding: 10px;
+    margin: 0 60px;
+}
+
+section {
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid #ffc1cc; /* Light pink border */
+    border-radius: 6px;
+    transition: background-color 0.3s, border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white to layer over floral background */
+}
+
+section:hover {
+    background-color: #ffe4e8; /* Light pastel pink on hover */
+    border-color: #f3a5b1; /* Darker pink border on hover */
+    cursor: pointer;
+}
+
+h2 {
+    margin-bottom: 2px;
+    font-size: 17.5px;
+    font-weight: bold;
+    color: #5a2d2d; /* Dark brown for headings */
+}
+
+p {
+    font-size: 17.5px;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+/* Horizontal line styling */
+hr {
+    border: 0;
+    border-top: 1px solid #ffc1cc; /* Light pink line */
+    margin: 10px 0;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: #c45b7c; /* Rose pink for links */
+}
+
+a:hover {
+    color: #f080a6; /* Lighter pink on hover */
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    color: #5a2d2d; /* Dark brown text */
+    background-color: #ffe4e8; /* Light pink background for popup */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #c45b7c;
+    width: 60%;
+}
+
+.close {
+    color: #c45b7c;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #5a2d2d;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Animated text */
+.anim {
+    animation: func 4s infinite;
+}
+
+@keyframes func {
+    0% {color: #ffeef2;} /* Soft pink */
+    20% {color: #c45b7c;} /* Rose pink */
+    40% {color: #f080a6;} /* Light pink */
+    60% {color: #5a2d2d;} /* Dark brown */
+    80% {color: #f3a5b1;} /* Soft rose */
+    100% {color: #ffeef2;} /* Back to soft pink */
+}
