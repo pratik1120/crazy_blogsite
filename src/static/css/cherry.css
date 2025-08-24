@@ -9,7 +9,6 @@ body {
     color: #b46a6a; /* Dark brown text for contrast */
     font-family: Arial, sans-serif; /* Fallback font */
     line-height: 1.4; /* Adjusted line height for tighter spacing */
-    padding: 20px 12%;
     
     /* Add floral motif as a background image */
     background-image: url('/static/images/cherry.avif'); /* Replace with your floral image URL */

@@ -9,7 +9,6 @@ body {
     color: white; /* White text for contrast */
     font-family: Arial, sans-serif; /* Fallback font */
     line-height: 1.4; /* Adjusted line height for tighter spacing */
-    padding: 20px 12%;
 }
 
 .top-header {

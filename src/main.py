@@ -24,7 +24,7 @@ def index():
 @app.route("/blog")
 def blog():
     posts=dict(reversed(getjson().items()))
-    return render_template("index.html",posts=posts)
+    return render_template("blog.html",posts=posts)
 
 
 @app.route("/blog/post/<num>")
