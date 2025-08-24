@@ -1,1 +1,1 @@
-"# crazy_blogsite" 
+## [my website](//strychnine.vercel.app)

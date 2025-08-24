@@ -62,9 +62,9 @@ header h1 {
 
 /* Main section styling */
 main {
-    padding: 10px;
-    margin: 0 60px;
+    margin: 0 10%; /* Increased indentation from left and right */
 }
+
 
 section {
     margin-bottom: 8px;
@@ -160,4 +160,33 @@ a:hover {
     60% {color: #5a2d2d;} /* Dark brown */
     80% {color: #f3a5b1;} /* Soft rose */
     100% {color: #ffeef2;} /* Back to soft pink */
+}
+        .featured-image {
+            width: 50%; /* Image takes 50% of the container width */
+            height: 50px; /* Fixed height for the image */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+            margin: 0 auto; /* Center the image horizontally */
+            display: block; /* Ensure image is a block element */
+            border-radius: 6px; /* Rounded corners for the image */
+            margin-bottom: 20px; /* Space below the image */
+        }
+
+        article {
+            margin-bottom: 16px; /* Space below the article */
+            padding: 12px; /* Padding inside the article */
+            border: 1px solid transparent; /* Border for hover effect */
+            border-radius: 6px; /* Slightly smaller rounded corners for the article */
+            background-color: #1a1a1a; /* Background color of the article */
+        }
+
+        .date {
+            font-style: italic; /* Italicize date */
+            margin-bottom: 16px; /* Space below the date */
+            text-align: center;
+        }
+.editor-toolbar {
+    text-align:center;
+}
+.EasyMDEContainer {
+    text-align: left;background-color: #dedede;
 }

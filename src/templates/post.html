@@ -1,46 +1,21 @@
 {% extends 'base.html' %}
-    {%block title%}{{name}}{%endblock%}
-    {%block style%}
-
-        .featured-image {
-            width: 50%; /* Image takes 50% of the container width */
-            height: 50px; /* Fixed height for the image */
-            object-fit: cover; /* Ensure the image covers the area without distortion */
-            margin: 0 auto; /* Center the image horizontally */
-            display: block; /* Ensure image is a block element */
-            border-radius: 6px; /* Rounded corners for the image */
-            margin-bottom: 20px; /* Space below the image */
-        }
-
-        article {
-            margin-bottom: 16px; /* Space below the article */
-            padding: 12px; /* Padding inside the article */
-            border: 1px solid transparent; /* Border for hover effect */
-            border-radius: 6px; /* Slightly smaller rounded corners for the article */
-            background-color: #1a1a1a; /* Background color of the article */
-        }
-
-        .date {
-            font-style: italic; /* Italicize date */
-            margin-bottom: 16px; /* Space below the date */
-        }
-    {%endblock%}
+{%block title%}{{name}}{%endblock%}
 {%block body%}
     <header>
-        <h1>post</h1>
+        <h1>{{name}}</h1>
     </header>
     <main>
-        <hr>
-        <img src="{{img}}" alt="Featured Image" class="featured-image">
+        <!-- <img src="{{img}}" alt="Featured Image" class="featured-image"> -->
         <article>
-            <h2><strong>{{name}}</strong></h2>
+            <!-- <h2><strong>{{name}}</strong></h2> -->
             <p class="date">{{date}} @ {{time}}</p>
+            <hr>
             <p>
-            <md-block>
-                {{content}}
-            </md-block>
+                <md-block>
+                    {{content}}
+                </md-block>
             </p>
+            <hr>
         </article>
-        <hr>
     </main>
 {%endblock%}

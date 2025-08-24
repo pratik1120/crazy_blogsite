@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>strychnine | {% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %} | strychnine</title>
     <link id="theme-stylesheet" rel="stylesheet" href="/static/css/black.css"> <!-- Default Theme -->
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <script src="/static/js/theme.js" defer></script>
@@ -31,10 +31,8 @@
         <nav>
             <ul>
                 <li><a href="/">[ home ]</a></li>
-                <li><a href="/docs">[ docs ]</a></li>
-                <li><a href="/random">[ random ]</a></li>
                 {% if session['logged_in'] %}
-                <li><a href="/new">[ add ]</a></li>
+                <li><a href="/blog/new">[ new ]</a></li>
                 <li><a href="/logout">[ logout ]</a></li>
                 {% else %}
                 <li><a href="/login">[ login ]</a></li>
