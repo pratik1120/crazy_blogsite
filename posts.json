@@ -1,0 +1,17 @@
+{
+    "1":{
+        "num":"1",
+        "name":"blog 1",
+        "date":"july 1, 2077",
+        "time":"9:00 am",
+        "content":"placdeholder contwnt",
+    },
+    "2":{
+        "num":"2",
+        "name":"yeah event 2",
+        "date":"august 19, 2024",
+        "time":"12:40 pm",
+        "content":"lrem ipsum everything...",
+        "img":"https://random.imagecdn.app/400/210"
+    }
+}

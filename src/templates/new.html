@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{%block title%}new{%endblock%}
+
+{%block head %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">{%endblock%}
+
+{%block body%}
+{% if session['logged_in'] %}
+<div style="text-align: center;">
+  <form id="newform" method=POST>
+  <br>
+  <input type="text" required id="title" name="title" placeholder="Post Title">
+  <br><br>
+  <textarea style="text-align: left !important;" placeholder="write here..." required name="content" rows=10 cols=55></textarea>
+  <br><br>
+  <input type="hidden" id="dateField" name="dateField" />
+  <input type="hidden" id="timeField" name="timeField" />
+  <button onclick="postForm()" type="button">donee</button>
+  </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+<script>
+  const easyMDE = new EasyMDE();
+  function postForm(){
+    var currentDateTime = new Date();
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var month = monthNames[currentDateTime.getMonth()];
+    var day = currentDateTime.getDate();
+    var year = currentDateTime.getFullYear();
+    var dateString = `${month} ${day}, ${year}`.toLowerCase();
+    var hours = currentDateTime.getHours();
+    var minutes = currentDateTime.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+    var timeString = `${hours}.${minutes} ${ampm}`.toLowerCase();
+    
+    document.getElementById("dateField").value = dateString;
+    document.getElementById("timeField").value = timeString;
+    document.getElementById("newform").submit()
+  }
+</script>
+{% endif %} 
+{%endblock%}

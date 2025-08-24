@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | strychine</title>
+    <link id="theme-stylesheet" rel="stylesheet" href="/static/css/default.css">
+    <script src="/static/js/theme.js" defer></script>
+    {% block head %}{% endblock %}
+    <style>
+    {% block style %}
+    {% endblock %}
+    </style>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div id="flashpopup" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <p>{{ message }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    <div class="top-header">
+        <nav>
+            <ul>
+                <li><a href="/">[ home ]</a></li>
+                <li><a href="/docs">[ docs ]</a></li>
+                <li><a href="/random">[ random ]</a></li>
+                {% if session['logged_in'] %}
+                <li><a href="/new">[ add ]</a></li>
+                <li><a href="/logout">[ logout ]</a></li>
+                {% else %}
+                <li><a href="/login">[ login ]</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    
+    {% block body %}
+    {% endblock %}
+    
+    <div id="theme-selector" style="position: fixed; bottom: 10px; right: 10px;">
+        <label for="theme-select">Choose Theme:</label>
+        <select id="theme-select">
+            <option value="black">Black (Default)</option>
+            <option value="cherry">Cherry Blossom</option>
+            <option value="cherryb">Dark Blossom</option>
+        </select>
+    </div>
+    
+    <p style="text-align: center; color: rgb(119, 119, 119);">
+        <small>Chuck Norris jokes from <a href="https://chucknorris.io">ChuckNorris API</a>.</small>
+    </p>
+</body>
+</html>
