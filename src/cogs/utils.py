@@ -11,8 +11,8 @@ fn="data.json"
 
 
 def getjson():
-    con = r.get(f"{url+gist}/raw/{fn}")
-    return con.json()
+    con = r.get(url+gist)
+    return json.loads(con.json()['files'][fn]['content'])
 
 
 def getpost(num:str):
