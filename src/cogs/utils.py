@@ -34,7 +34,7 @@ def getpost(num:str):
     post = con[num]
     return post
 
-def addpost(name, date, time, content, img):
+def addpost(name, date, time, content):
     con = getjson()
     num = str(len(con)+1)
     con.update({num:

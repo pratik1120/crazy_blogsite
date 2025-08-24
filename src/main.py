@@ -5,13 +5,11 @@ import json
 from datetime import datetime
 import os
 from .cogs.utils import *
-from .cogs import api
 
 
 app = Flask(__name__)
 app.secret_key = os.getenv("secretkey")
-app.register_blueprint(api.api)
-password=os.getenv("password")
+password=os.getenv("secretkey")
 
 
 @app.route("/")
@@ -47,9 +45,8 @@ def addnew():
     date = request.form['dateField']
     time = request.form['timeField']
     content = request.form["content"]
-    img = "https://random.imagecdn.app/400/250"
-    num = addpost(name,date,time,content,img)
-    return redirect(url_for("index"))
+    num = addpost(name,date,time,content)
+    return redirect(url_for("blog"))
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -58,12 +55,12 @@ def login():
         flash("already logged in")
         return redirect(url_for("index"))
     if request.method == 'POST':
-        if request.form['password'] != password:
-            flash('invalid password.')
-        else:
+        if request.form['password'] == password:
             session['logged_in'] = True
             return redirect(url_for('index'))
-    flash(f"logged in successfully")
+            flash('logged in succesfully')
+        else:
+            flash('invalid password.')
     return render_template('login.html')
 
 
