@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+  {% for key, post in posts.items() %}
+    <a href="{{ url_for('post', num=key) }}" class="post-link">
+      <section class="post-box">
+        <h2>
+          <strong>{{ post.num }}. <span>{{ post.name }}</span></strong>
+        </h2>
+        <p>{{ post.date }}</p>
+        <p>{{ post.time }}</p>
+      </section>
+    </a>
+  {% else %}
+    <p>No posts yet.</p>
+  {% endfor %}
+</div>
+{% endblock %}

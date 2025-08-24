@@ -1,0 +1,17 @@
+:root {
+  --main-color: #58ffee;
+  --bg-image: #444;
+}
+
+body {
+  color: var(--main-color);
+}
+
+.navbar a {
+  color: var(--main-color);
+}
+
+.navbar a:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 8px var(--main-color);
+}
