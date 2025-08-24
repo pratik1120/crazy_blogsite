@@ -1,1 +1,1 @@
-## [my website](//strychnine.vercel.app)₹₹
+## [my website](//strychnine.vercel.app)
