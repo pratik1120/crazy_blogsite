@@ -15,12 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const themeStylesheet = document.getElementById("theme-stylesheet");
         let themePath;
         switch (theme) {
-            case "theme2":
-                themePath = "/static/css/theme2.css";
+            case "cherry":
+                themePath = "/static/css/cherry.css";
                 break;
-            case "theme1":
+            case "cherryb":
+                themePath = "/static/css/cherryb.css";
+                break;
+            case "black":
             default:
-                themePath = "/static/css/theme1";
+                themePath = "/static/css/black.css";
         }
 
         themeStylesheet.setAttribute("href", themePath);
