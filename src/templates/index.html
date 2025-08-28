@@ -1,15 +1,8 @@
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strychnine</title>
-  <link id="theme-stylesheet" rel="stylesheet" href="/static/css/index.css">
-</head>
-<body>
-  <div class="background-pipes"></div>
+{%block title%}Home{%endblock%}
 
+{%block body%}
   <div class="container">
     <div class="profile-header">
       <h1>Hi! I am known as...</h1>
@@ -36,6 +29,14 @@
         </div>
       </div>
     </div>
+    <div class="profile-content">
+      <div class="profile-section">
+        <h2>Pages:</h2>
+        <ul class="tech-list">
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+        <span class="cursor"></span>
+      </div>
   </div>
-</body>
-</html>
+
+{%endblock%}
