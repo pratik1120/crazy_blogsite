@@ -9,7 +9,10 @@
         <div style="text-align:center">
             <h1>nothing here <strong><span class="anim">yet</span></strong>.</h1>
         </div>
+        {% else %}
+        <p>Blog</p>
         {% endif %}
+        <span onclick="history.back()" >[back]</span>
     </header>
     <main>
         {% if posts=={} %}
@@ -17,7 +20,6 @@
             <p>check the <a style="text-decoration: underline;" href="//instagram.com/strychnine_and_water/" target="_blank">instagram</a>, might as well?</p>
         </div>
         {% else %}
-        <hr>
         {% for key in posts %}
         <a href="/blog/post/{{key}}">
             <section>
