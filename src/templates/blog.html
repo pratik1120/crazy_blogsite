@@ -3,32 +3,34 @@
 {% block title %}Blog{%endblock%}
 
 {% block body %}
-<header>
-    {% if posts=={} %}
-    <div style="text-align:center">
-        <h1>nothing here <strong><span class="anim">yet</span></strong>.</h1>
-    </div>
-    {% endif %}
-</header>
-<main>
-    {% if posts=={} %}
-    <div style="text-align:center">
-        <p>check the <a style="text-decoration: underline;" href="//instagram.com/strychnine_and_water/" target="_blank">instagram</a>, might as well?</p>
-    </div>
-    {% else %}
-    <hr>
-    {% for key in posts %}
-    <a href="/blog/post/{{key}}">
-        <section>
-            <h2>
-                <strong>{{ posts[key]['num'] }}. <span style="text-decoration: underline;">{{posts[key]['name']}}</span></strong>
-            </h2>
-            <p>{{posts[key]['date']}}</p>
-            <p>{{posts[key]['time']}}</p>
-        </section>
-    </a>
-    {%endfor%}
-    {% endif %}
-    <hr>
-</main>
+<div class="container">
+    <header>
+        {% if posts=={} %}
+        <div style="text-align:center">
+            <h1>nothing here <strong><span class="anim">yet</span></strong>.</h1>
+        </div>
+        {% endif %}
+    </header>
+    <main>
+        {% if posts=={} %}
+        <div style="text-align:center">
+            <p>check the <a style="text-decoration: underline;" href="//instagram.com/strychnine_and_water/" target="_blank">instagram</a>, might as well?</p>
+        </div>
+        {% else %}
+        <hr>
+        {% for key in posts %}
+        <a href="/blog/post/{{key}}">
+            <section>
+                <h2>
+                    <strong>{{ posts[key]['num'] }}. <span style="text-decoration: underline;">{{posts[key]['name']}}</span></strong>
+                </h2>
+                <p>{{posts[key]['date']}}</p>
+                <p>{{posts[key]['time']}}</p>
+            </section>
+        </a>
+        {%endfor%}
+        {% endif %}
+        <hr>
+    </main>
+</div>
 {%endblock%}
