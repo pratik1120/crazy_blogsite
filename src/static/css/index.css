@@ -12,7 +12,7 @@
       padding: 10px;
       min-height: 100vh;
       position: relative;
-      overflow: hidden;
+      overflow-y: scroll;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -171,3 +171,4 @@
         min-height: 100px;
       }
     }
+
