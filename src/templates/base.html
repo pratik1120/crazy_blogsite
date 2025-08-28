@@ -16,6 +16,7 @@
     </style>
 </head>
 <body>
+    <div class="background-pipes"></div>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
@@ -28,21 +29,18 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-    
-
-    
     {% block body %}
     {% endblock %}
     
-    <!-- <div id="theme-selector" style="position: fixed; bottom: 10px; right: 10px;z-index: 10;">
+    <div id="theme-selector" style="position: fixed; bottom: 10px; right: 10px;z-index: 10;">
         <select id="theme-select">
             <option value="black">Black (Default)</option>
             <option value="cherry">Cherry Blossom</option>
             <option value="cherryb">Dark Blossom</option>
         </select>
-    </div> -->
+    </div>
     
-    <div style="text-align: center; color: #eee; position: fixed; bottom:0px;text-align: center;background:#141414;line-height: 0px;width:100%;">
+    <div style="text-align: center; color: #eee; position: fixed; bottom:0px;text-align: center;background:#1f1f1f;line-height: 0px;width:100%;">
         <p><small>strychnine 2025</small></p>
     </div>
 </body>

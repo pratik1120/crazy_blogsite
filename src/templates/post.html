@@ -1,21 +1,17 @@
 {% extends 'base.html' %}
 {%block title%}{{name}}{%endblock%}
 {%block body%}
-    <header>
-        <h1>{{name}}</h1>
-    </header>
-    <main>
-        <!-- <img src="{{img}}" alt="Featured Image" class="featured-image"> -->
+    <div class="container">
+        <header>
+            <h1>{{name}}</h1>
+        </header>
         <article>
-            <!-- <h2><strong>{{name}}</strong></h2> -->
             <p class="date">{{date}} @ {{time}}</p>
-            <hr>
             <p>
                 <md-block>
                     {{content}}
                 </md-block>
             </p>
-            <hr>
         </article>
-    </main>
+    </div>
 {%endblock%}

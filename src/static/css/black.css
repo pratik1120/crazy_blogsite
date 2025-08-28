@@ -74,8 +74,9 @@ hr {
 }
 
 a {
-    text-decoration: underline; /* Remove underline from links */
-    color: inherit; /* Inherit color from parent */
+    text-decoration: none;
+    color: #c2c500;
+    cursor: pointer;
 }
 a:hover {
     color:#9b9e00;
