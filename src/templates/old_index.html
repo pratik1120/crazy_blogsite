@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{%block title%}Home{%endblock%}
+
+{%block body%}
+<main>
+<article>
+    {% if session.get('logged_in') %}
+    <h2>The <a href="/blog">blog</a> system is up and running.</h2>
+    <p>I've left this page like this because I think the index page (this page) is yours.</p>
+    <p>I say, go to <a href="//neocities.org/browse" target="_blank">neocities</a> and browse.</p>
+    <p>Express your creativity here.</p>
+    <p>Be as unique as possible, be as cool as possible.</p>
+    {% else %}
+    <p><strong><a href="/login">Login</a> required</strong>.</p>
+    {% endif %}
+</article>
+<div style="text-align:center;bottom:0;position: relative;margin-bottom: 10%;">
+<iframe src="https://www5.cbox.ws/box/?boxid=958275&boxtag=onUfMe" 
+width="95%" height="300px" allowtransparency="yes" allow="autoplay" 
+frameborder="0" marginheight="0" marginwidth="0" scrolling="auto">
+</iframe>
+</div>
+</main>
+{%endblock%}

@@ -1,0 +1,162 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: monospace;
+      background-color: #282828; /* gruvbox dark background */
+      color: #ebdbb2; /* gruvbox light text */
+      margin: 0;
+      padding: 10px;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Pipe background */
+    .background-pipes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: 
+        linear-gradient(90deg, rgba(80,73,69,0.2) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(80,73,69,0.2) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: movePipes 20s linear infinite;
+    }
+
+    @keyframes movePipes {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 40px 40px;
+      }
+    }
+
+    .container {
+      background-color: #1d2021; /* gruvbox dark hard background */
+      width: 100%;
+      max-width: 800px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-header {
+      background-color: #32302f; /* gruvbox dark soft background */
+      padding: 40px 20px;
+      text-align: center;
+      margin-bottom: 10px;
+      border: 1px solid #504945; /* gruvbox dark gray */
+    }
+
+    .profile-header h1 {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+      color: #ebdbb2; /* gruvbox light text */
+    }
+
+    .profile-header p {
+      margin: 0;
+      font-size: 22px;
+      color: #b8bb26; /* gruvbox bright green */
+      font-weight: bold;
+    }
+
+    .profile-content {
+      display: flex;
+      gap: 10px;
+    }
+
+    .profile-section {
+      background-color: #32302f; /* gruvbox dark soft background */
+      padding: 20px;
+      flex: 1;
+      border: 1px solid #504945; /* gruvbox dark gray */
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-section h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #fabd2f; /* gruvbox bright yellow */
+    }
+
+    .tech-list {
+      list-style-type: none;
+      color: #83a598; /* gruvbox bright blue */
+    }
+
+    .tech-list li {
+      margin-bottom: 8px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-button {
+      background-color: #3c3836; /* gruvbox dark bg1 */
+      padding: 5px 10px;
+      font-family: monospace;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid;
+      display: inline-block;
+    }
+
+    .instagram-button {
+      color: #ff00f2;
+      border-color: #e100ff;
+    }
+
+    .github-button {
+      color: #4078c0;
+      border-color: #4078c0;
+    }
+
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 15px;
+      background-color: #83a598; /* gruvbox bright blue */
+      animation: blink 1s infinite;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .profile-content {
+        flex-direction: column;
+      }
+
+      .profile-section {
+        min-height: 100px;
+      }
+    }
