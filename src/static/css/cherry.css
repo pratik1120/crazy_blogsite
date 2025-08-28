@@ -7,10 +7,6 @@ body, h1, h2, p {
 body {
     background-color: #ffeef2; /* Soft pink background */
     color: #b46a6a; /* Dark brown text for contrast */
-    font-family: Arial, sans-serif; /* Fallback font */
-    line-height: 1.4; /* Adjusted line height for tighter spacing */
-    
-    /* Add floral motif as a background image */
     background-image: url('/static/images/cherry.avif'); /* Replace with your floral image URL */
     background-size: cover; /* Adjust size as needed for subtle effect */
     background-blend-mode: multiply; /* Blend with background color for softer effect */

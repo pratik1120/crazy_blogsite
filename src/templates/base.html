@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
     <title>{% block title %}{% endblock %} | strychnine</title>
     <link id="theme-stylesheet" rel="stylesheet" href="/static/css/black.css"> <!-- Default Theme -->
+    <link rel="stylesheet" href="/static/css/index.css">
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <script src="/static/js/theme.js" defer></script>
     {% block head %}{% endblock %}
@@ -28,30 +29,18 @@
         {% endif %}
     {% endwith %}
     
-    <div class="top-header">
-        <nav>
-            <ul>
-                <li><a href="/">[ home ]</a></li>
-                <li><a href="/blog">[ blog ] </a></li>
-                {% if session['logged_in'] %}
-                <li><a href="/blog/new">[ new ]</a></li>
-                <li><a href="/logout">[ logout ]</a></li>
-                {% else %}
-                {% endif %}
-            </ul>
-        </nav>
-    </div>
+
     
     {% block body %}
     {% endblock %}
     
-    <div id="theme-selector" style="position: fixed; bottom: 10px; right: 10px;z-index: 10;">
+    <!-- <div id="theme-selector" style="position: fixed; bottom: 10px; right: 10px;z-index: 10;">
         <select id="theme-select">
             <option value="black">Black (Default)</option>
             <option value="cherry">Cherry Blossom</option>
             <option value="cherryb">Dark Blossom</option>
         </select>
-    </div>
+    </div> -->
     
     <div style="text-align: center; color: #eee; position: fixed; bottom:0px;text-align: center;background:#141414;line-height: 0px;width:100%;">
         <p><small>strychnine 2025</small></p>

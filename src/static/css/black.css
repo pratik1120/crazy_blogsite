@@ -1,16 +1,3 @@
-/* Reset some default styles */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: black;
-    color: white; /* White text for contrast */
-    font-family: Arial, sans-serif; /* Fallback font */
-    line-height: 1.4; /* Adjusted line height for tighter spacing */
-}
-
 .top-header {
     text-align: center;
     color: #888; /* Greyish text color */
