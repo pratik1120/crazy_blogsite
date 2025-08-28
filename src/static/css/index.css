@@ -135,6 +135,16 @@
       color: #4078c0;
       border-color: #4078c0;
     }
+    
+    .letterboxd-button {
+      color: #00fa53;
+      border-color: #ffaf1a;
+    }
+     
+    .pinterest-button {
+      color: #ff1e1e;
+      border-color: #ff0000;
+    }
 
 
     .cursor {
